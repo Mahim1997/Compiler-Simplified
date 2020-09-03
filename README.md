@@ -11,8 +11,11 @@ Compiler for a subset of C language
 
 - Performed syntactic analysis using Bison.
 
-- Implemented certain optimizations while generating assembly code eg. NOP removal, efficient usage of temp. variables, faster multiplication/division using shift operations.
-
+- Implemented certain optimizations while generating assembly code such as: 
+    * NOP removal
+    * Efficient usage of temporary variables
+    * Faster multiplication/division by 2 using shift operations.
+    * Removal of consecutive same operations
 
 ## Execution Commands
 

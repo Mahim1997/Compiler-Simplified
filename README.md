@@ -16,25 +16,33 @@ Compiler for a subset of C language
 
 ## Execution Commands
 
+#### For script execution
 ```bash
-bison -d -y 1505022.y  # To run Bison
-echo '===>>> 1st step bison -d -y 1505022_Bison.y done\n'
+  ## Input file:  1505022_Input.txt 
+  ## Output file: 1505022.asm
+  ./command.sh
+```
 
-g++ -fpermissive -w -c -o y.o y.tab.c
-echo '===>>> 2nd step g++ -fpermissive -w -c -o y.o y.tab.c done \n'
+#### For step-by-step execution
+```bash
+  bison -d -y 1505022.y  # To run Bison
+  echo '===>>> 1st step bison -d -y 1505022_Bison.y done\n'
 
-flex 1505022.l  # To run flex
-echo '====>> 3rd step flex 1505022_Flex.l done \n'
+  g++ -fpermissive -w -c -o y.o y.tab.c
+  echo '===>>> 2nd step g++ -fpermissive -w -c -o y.o y.tab.c done \n'
 
-g++ -fpermissive -w -c -o l.o lex.yy.c
-echo '====>> 4th step g++ -fpermissive -w -c -o l.o lex.yy.c done\n'
+  flex 1505022.l  # To run flex
+  echo '====>> 3rd step flex 1505022_Flex.l done \n'
 
-g++ -o a.out y.o l.o -lfl -ly
-echo '====>> 5th step g++ -o a.out y.o l.o -lfl -ly done\n\n\n'
+  g++ -fpermissive -w -c -o l.o lex.yy.c
+  echo '====>> 4th step g++ -fpermissive -w -c -o l.o lex.yy.c done\n'
 
-./a.out 1505022_Input.txt  # Run the program
+  g++ -o a.out y.o l.o -lfl -ly
+  echo '====>> 5th step g++ -o a.out y.o l.o -lfl -ly done\n\n\n'
 
-g++ -o outOpt.out IntermediateCodeStuffs/OptimizerRunner.cpp  # Run optimizations
-./outOpt.out
+  ./a.out 1505022_Input.txt  # Run the program
+
+  g++ -o outOpt.out IntermediateCodeStuffs/OptimizerRunner.cpp  # Run optimizations
+  ./outOpt.out
 
 ```

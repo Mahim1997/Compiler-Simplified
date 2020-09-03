@@ -1,9 +1,9 @@
 # Compiler-Simplified
 Compiler for a subset of C language
 
-  Input: A program in C language (a subset)
+> Input: A program in C language (a subset)
 
-  Output: Corresponding assembly code (with certain optimizations)
+> Output: Corresponding assembly code (with certain optimizations)
 
 ## Highlights
 

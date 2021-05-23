@@ -1,4 +1,4 @@
-# Compiler-Simplified
+# Compiler (Simplified)
 Compiler for a subset of C language
 
 > Input: A program in C language (a subset)
